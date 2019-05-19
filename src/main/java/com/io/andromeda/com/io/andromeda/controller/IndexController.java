@@ -1,10 +1,18 @@
 package com.io.andromeda.com.io.andromeda.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.io.andromeda.com.io.andromeda.Dao.FeedbackDao;
+import com.io.andromeda.com.io.andromeda.Entity.FeedbackEntity;
 
 /**
  * Created by Keno&Kemo on 30.09.2017..
@@ -14,6 +22,7 @@ import org.springframework.web.context.request.WebRequest;
 @RequestMapping("")
 public class IndexController {
 
+	
     @GetMapping(value = {"/", "/index"})
     public String index (){
         return "index";
@@ -52,4 +61,5 @@ public class IndexController {
     public String showRegistrationForm(WebRequest request, Model model) {
         return "cart";
     }
+    
 }

@@ -554,10 +554,29 @@ stickyHeader();
     }
     paymentMethodToggle();
 
-
-
-
-
+    $("#feedback-submit").click(function() {
+    	var feedbackEntity = {
+    	        'firstName' : $('#first-name').val(),
+    			'lastName' :  $('#last-name').val(),
+    			'emailId': $('#email-id').val(),
+    			'mobileNo': $('#mobile-no').val(),
+    			'message': $('#message').val()
+    	    };
+    	$.ajax({
+    		type : 'POST',
+    	    contentType: "application/json",
+    	    url : window.location+'sendfeedback',
+    	    data : JSON.stringify(feedbackEntity),
+    	    dataType:'json',
+    	    success : function(data) {              
+    	        alert('Data: '+data);
+    	    },
+    	    error : function(request,error)
+    	    {
+    	        alert("Request: "+JSON.stringify(request));
+    	    }
+    	});
+    	});
 
 
 

@@ -1315,7 +1315,7 @@ a#scrollUp {
 
 .section-padding--lg {
 	height: 530px;
-  padding: 60px 0; }
+  padding: 45px 0; }
 
 .section-pt--lg {
   padding-top: 130px; }
@@ -1509,9 +1509,9 @@ a#scrollUp {
   display: inline-block;
   font-family: "Alegreya", serif;
   font-size: 18px;
-  height: 45px;
-  line-height: 45px;
-  padding: 0 22px;
+  height: 37px;
+  line-height: 31px;
+  padding: 0 12px;
   text-transform: capitalize;
   position: relative;
   transform: translateZ(0px);
@@ -8823,5 +8823,8 @@ input[type="submit"] {
 
 textarea:focus, input:focus {
     color: #ff0000;
+}
+textarea:hover, input:hover {
+   cursor:pointer !important;
 }
 /*# sourceMappingURL=style.css.map */
