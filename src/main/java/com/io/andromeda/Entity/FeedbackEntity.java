@@ -1,4 +1,6 @@
-package com.io.andromeda.com.io.andromeda.Entity;
+package com.io.andromeda.Entity;
+
+import java.sql.Timestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,6 +20,13 @@ public class FeedbackEntity {
 	private String emailId;
 	private String mobileNo;
 	private String message;
+	public Timestamp getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(Timestamp createDate) {
+		this.createDate = createDate;
+	}
+	private Timestamp createDate;
 	
 	public String getFirstName() {
 		return firstName;

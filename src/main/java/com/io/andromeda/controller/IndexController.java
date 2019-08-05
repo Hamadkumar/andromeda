@@ -1,18 +1,15 @@
-package com.io.andromeda.com.io.andromeda.controller;
+package com.io.andromeda.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.io.andromeda.com.io.andromeda.Dao.FeedbackDao;
-import com.io.andromeda.com.io.andromeda.Entity.FeedbackEntity;
 
 /**
  * Created by Keno&Kemo on 30.09.2017..
@@ -24,7 +21,12 @@ public class IndexController {
 
 	
     @GetMapping(value = {"/", "/index"})
-    public String index (){
+    public String index (HttpSession session){
+//    	List<String> messages = (List<String>) session.getAttribute("MY_SESSION_MESSAGES");
+//
+//		if (messages == null) {
+//			messages = new ArrayList<>();
+//		}
         return "index";
     }
 

@@ -1,4 +1,6 @@
-package com.io.andromeda.com.io.andromeda.Dao;
+package com.io.andromeda.Dao;
+
+import java.sql.Timestamp;
 
 import javax.sql.DataSource;
 
@@ -6,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import com.io.andromeda.com.io.andromeda.Entity.FeedbackEntity;
+import com.io.andromeda.Entity.FeedbackEntity;
 
 @Component
 public class FeedbackDaoImpl {
@@ -21,9 +23,9 @@ public class FeedbackDaoImpl {
     
     public void insertWithQuery(FeedbackEntity feedbackEntity){
             JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-            jdbcTemplate.update("INSERT INTO fds_feedback (first_name, last_name, email_id, mobile_no, message) VALUES (?,?,?,?,?)",
+            jdbcTemplate.update("INSERT INTO fds_feedback (first_name, last_name, email_id, mobile_no, message,create_date) VALUES (?,?,?,?,?,?)",
             		feedbackEntity.getFirstName(),feedbackEntity.getLastName(),feedbackEntity.getEmailId(),
-            		feedbackEntity.getMobileNo(),feedbackEntity.getMessage());
+            		feedbackEntity.getMobileNo(),feedbackEntity.getMessage(),new Timestamp(System.currentTimeMillis()));
             
     }
 	

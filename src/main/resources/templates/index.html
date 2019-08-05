@@ -338,13 +338,13 @@
 			<div class="accountbox__inner tab-content" id="myTabContent">
 				<div class="accountbox__login tab-pane fade show active" id="log"
 					role="tabpanel" aria-labelledby="log-tab">
-					<form action="#">
+					<form role="form" method="post" action="/login">
 						<div class="single-input">
-							<input class="cr-round--lg" type="text"
+							<input id="username" name="username" class="cr-round--lg" type="text"
 								placeholder="User name or email">
 						</div>
 						<div class="single-input">
-							<input class="cr-round--lg" type="password"
+							<input id="password" name="password" class="cr-round--lg" type="password"
 								placeholder="Password">
 						</div>
 						<div class="single-input">
@@ -371,22 +371,22 @@
 					role="tabpanel" aria-labelledby="profile-tab">
 					<form action="#">
 						<div class="single-input">
-							<input class="cr-round--lg" type="text" placeholder="User name">
+							<input class="cr-round--lg" type="text" id="register-username" placeholder="User name">
 						</div>
 						<div class="single-input">
-							<input class="cr-round--lg" type="email"
+							<input class="cr-round--lg" type="email" id="register-email"
 								placeholder="Email address">
 						</div>
 						<div class="single-input">
-							<input class="cr-round--lg" type="password"
+							<input class="cr-round--lg" type="password" id="register-password"
 								placeholder="Password">
 						</div>
 						<div class="single-input">
-							<input class="cr-round--lg" type="password"
+							<input class="cr-round--lg" type="password" id="passwordRepeated"
 								placeholder="Confirm password">
 						</div>
 						<div class="single-input">
-							<button type="submit" class="food__btn">
+							<button id="register-submit" type="submit" class="food__btn">
 								<span>Sign Up</span>
 							</button>
 						</div>
