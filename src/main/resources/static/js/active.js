@@ -554,11 +554,62 @@ stickyHeader();
     }
     paymentMethodToggle();
 
+    $("#feedback-submit").click(function(event) {
+    	var feedbackEntity = {
+    	        'firstName' : $('#first-name').val(),
+    			'lastName' :  $('#last-name').val(),
+    			'emailId': $('#email-id').val(),
+    			'mobileNo': $('#mobile-no').val(),
+    			'message': $('#message').val()
+    	    };
+    	event.preventDefault(); 
+    	$.ajax({
+    		type : 'POST',
+    	    contentType: "application/json",
+    	    url : window.location+'bistro/sendfeedback',
+    	    data : JSON.stringify(feedbackEntity),
+    	    dataType:'json',
+    	    success : function(data) {              
+    	        alert('Thank You for your feedback');
+    	        $('#first-name').val('');
+    			$('#last-name').val('');
+    			$('#email-id').val('');
+    			$('#mobile-no').val('');
+    			$('#message').val('');
+    	    },
+    	    error : function(request,error)
+    	    {
+    	        alert('Oops !! Error Occured !! Please Try Again');
+    	    }
+    	});
+    	});
 
-
-
-
-
-
+    $("#register-submit").click(function(event) {
+    	var userCreateForm = {
+    	        'username' : $('#register-username').val(),
+    			'email' :  $('#register-email').val(),
+    			'password': $('#register-password').val(),
+    			'passwordRepeated': $('#passwordRepeated').val()
+    	    };
+    	event.preventDefault(); 
+    	$.ajax({
+    		type : 'POST',
+    	    contentType: "application/json",
+    	    url : window.location+'register',
+    	    data : JSON.stringify(userCreateForm),
+    	    dataType:'json',
+    	    success : function(data) {              
+    	        alert('User Successfully Registered');
+    	        $('#register-username').val('');
+    			$('#register-email').val('');
+    			$('#register-password').val('');
+    			$('#passwordRepeated').val('');
+    	    },
+    	    error : function(request,error)
+    	    {
+    	        alert('Oops !! Error Occured !! Please Try Again');
+    	    }
+    	});
+    	});
 
 })(jQuery);

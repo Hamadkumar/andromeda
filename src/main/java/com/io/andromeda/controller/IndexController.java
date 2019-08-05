@@ -1,4 +1,9 @@
-package com.io.andromeda.com.io.andromeda.controller;
+package com.io.andromeda.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +19,14 @@ import org.springframework.web.context.request.WebRequest;
 @RequestMapping("")
 public class IndexController {
 
+	
     @GetMapping(value = {"/", "/index"})
-    public String index (){
+    public String index (HttpSession session){
+//    	List<String> messages = (List<String>) session.getAttribute("MY_SESSION_MESSAGES");
+//
+//		if (messages == null) {
+//			messages = new ArrayList<>();
+//		}
         return "index";
     }
 
@@ -52,4 +63,5 @@ public class IndexController {
     public String showRegistrationForm(WebRequest request, Model model) {
         return "cart";
     }
+    
 }

@@ -563,7 +563,7 @@ a#scrollUp {
   width: 45px;
   font-size: 25px;
   text-align: center;
-  padding: 9px 0;
+  padding: 5px 0;
   box-shadow: 0 0 15px 0px rgba(50, 50, 50, 0.2); }
   a#scrollUp:hover {
     background: #d50c0d;
@@ -1314,7 +1314,8 @@ a#scrollUp {
   padding: 200px 0; }
 
 .section-padding--lg {
-  padding: 130px 0; }
+	height: 530px;
+  padding: 45px 0; }
 
 .section-pt--lg {
   padding-top: 130px; }
@@ -1508,9 +1509,9 @@ a#scrollUp {
   display: inline-block;
   font-family: "Alegreya", serif;
   font-size: 18px;
-  height: 45px;
-  line-height: 45px;
-  padding: 0 22px;
+  height: 37px;
+  line-height: 31px;
+  padding: 0 12px;
   text-transform: capitalize;
   position: relative;
   transform: translateZ(0px);
@@ -2420,7 +2421,6 @@ nav.main__menu__nav {
   position: relative;
   text-transform: capitalize; }
   .footer .ftr__title::after {
-    background-image: url("images/icon/shape/3.png");
     background-repeat: no-repeat;
     background-size: auto auto;
     bottom: 0;
@@ -8195,6 +8195,7 @@ input[type="submit"] {
     color: #959595;
     font-size: 15px;
     float: left; }
+   
   .checkout-form select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -8805,4 +8806,25 @@ input[type="submit"] {
   .subs--4 .fd__subscribe__area {
     padding: 0; } }
 
+ #message {
+    width: 100%;
+    border: 1px solid #ededed;
+    background-color: #ffffff;
+    height: 100px;
+    line-height: 24px;
+    padding: 7px 15px;
+    color: #959595;
+    font-size: 15px;
+    float: left; }
+    
+    input, select, textarea{
+    color: #ff0000;
+}
+
+textarea:focus, input:focus {
+    color: #ff0000;
+}
+textarea:hover, input:hover {
+   cursor:pointer !important;
+}
 /*# sourceMappingURL=style.css.map */
