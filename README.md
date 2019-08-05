@@ -1,6 +1,6 @@
 <h1>ANDROMEDA</h1>
 
-The project is about the food delivery system. The Project has been developed with these technologies.
+The project is about the food delivery system. People can order foods for a particular time. And the order is later reviewed by the admin and the deliveries are taken care based on their user details. The Project has been developed with these technologies.
 
 <h3>
 1. Spring Boot<br>
